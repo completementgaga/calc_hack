@@ -15,7 +15,8 @@ in the calculated questions, you cannot use latex in the answers.
 
  after the questions for which you use parameters you must add the
  following lines
- params\\
+
+ params"&#92;""&#92;"
  a: sa
  b: sb
 
@@ -27,7 +28,8 @@ in the calculated questions, you cannot use latex in the answers.
 
  after the parameters description you must also add two lines:
 
- digits\\
+
+ digits"&#92;""&#92;"
  value
 
  where value determines both the number of digits calculated in the proposed answers
