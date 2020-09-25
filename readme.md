@@ -1,5 +1,12 @@
 This script works for simple quiz with questions of type numerical or multi as
 described in the documentation of moodle package for latex.
+
+
+Warning: in our example setup we actually use an alternate version of moodle.sty (moodlept.sty, as suggested by D. Smania) designed to work better with portuguese language
+The moodle package is documented and available in its original version at https://ctan.org/pkg/moodle.
+
+
+
 0) check the example source calcquiz.tex
 1) compile your quiz (eg calcquiz.tex) with Luatex and the moodle.sty package
 2) run the python script calc_hack with input  your tex file name
@@ -16,7 +23,7 @@ in the calculated questions, you cannot use latex in the answers.
  after the questions for which you use parameters you must add the
  following lines
 
- params"&#92;""&#92;"
+ params\\\\
  a: sa
  b: sb
 
@@ -29,7 +36,7 @@ in the calculated questions, you cannot use latex in the answers.
  after the parameters description you must also add two lines:
 
 
- digits"&#92;""&#92;"
+ digits\\\\
  value
 
  where value determines both the number of digits calculated in the proposed answers
