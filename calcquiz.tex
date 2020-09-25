@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage{moodlept}
+
+\begin{document}
+
+\begin{quiz}{An example of a quiz with calculated questions}
+\begin{numerical}[points=2]{Basic addition, calculated}
+  What is ${a}+{b}$?
+  \item {a}+{b}
+  \end{numerical}
+  params\\
+  a: range(19)\\
+  b: -7,1,2,3,4,5,6,7,8,9,10,11,14,15,17,18,19,20,21,22,23,24,27,28,29,-8\\
+  digits(for the result)\\
+  1
+
+  \begin{multi}{estudo de uma sequência}
+  Seja, para todo inteiro $n>0$, \[v_n=\frac{e^n}{n}.\]
+  A sequência $(v_n)$ possui o limite
+  \item $1$.
+  \item $0$.
+  \item $e$.
+  \item* $+\infty$.
+  \end{multi}
+
+
+\begin{multi}[multiple]{Sequências, Convergência}
+A sequência $\displaystyle \frac{n^2}{{b}} \text{sen}\left(\frac{{a}}{n^{2}}\right)$
+\item* Converge a {a}/{b}
+\item diverge, pois fica oscilando com valores positivos e negativos.
+\item tem limite igual a infinito
+\item Converge a 0.
+\end{multi}
+
+params\\
+a: range(1,9)\\
+b: 1,2,3\\
+digits(for the calculated results)\\
+0
+\end{quiz}
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
