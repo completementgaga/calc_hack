@@ -24,7 +24,9 @@ in the calculated questions, you cannot use latex in the answers.
  following lines
 
  params\\\\
+
  a: sa
+
  b: sb
 
  and so on where a,b,... are the letters used for the parameters
@@ -37,6 +39,7 @@ in the calculated questions, you cannot use latex in the answers.
 
 
  digits\\\\
+
  value
 
  where value determines both the number of digits calculated in the proposed answers
