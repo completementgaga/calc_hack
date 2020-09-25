@@ -23,11 +23,9 @@ in the calculated questions, you cannot use latex in the answers.
  after the questions for which you use parameters you must add the
  following lines
 
- params\\\\
-
- a: sa
-
- b: sb
+ params\\\\  
+ a: sa  
+ b: sb  
 
  and so on where a,b,... are the letters used for the parameters
  and sa,sb,... determine the set in which the values are randomly taken (uniformly).
@@ -38,9 +36,8 @@ in the calculated questions, you cannot use latex in the answers.
  after the parameters description you must also add two lines:
 
 
- digits\\\\
-
- value
+ digits\\\\  
+ value  
 
  where value determines both the number of digits calculated in the proposed answers
  and the tolerance when the answer is entered; in this latter case, the tolerance is 10^(-value)
