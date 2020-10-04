@@ -8,11 +8,16 @@ The moodle package is documented and available in its original version at https:
 
 
 0) check the example source calcquiz.tex
-1) compile your quiz (eg calcquiz.tex) with Luatex and the moodle.sty package
+1) compile your quiz (eg calcquiz.tex) with lualatex and the moodle.sty package
+(eg in our case, in the terminal:  
+$ cd /path/to/calcquiz.tex  
+$ lualatex -interaction=nonstopmode calcquiz.tex  
+)
 2) run the python script calc_hack with input  your tex file name
-(eg in our case, in the terminal:
-$ cd /path/to/calc_hack
-$ python3 calc_hack.py 'calcquiz.tex')
+(eg in our case, in the terminal:  
+$ cd /path/to/calc_hack.py  
+$ python3 calc_hack.py 'calcquiz.tex'  
+)
 (using python 2 should work too, please inform me if it is not the case)
 3) import the output (in our case calcquiz-moodle-calc.xml) to your moodle platform.
 
