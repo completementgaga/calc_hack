@@ -14,7 +14,6 @@ def findcalculated(file_name):
       p=0
       digits=0
       for draftline in a_file:
-
         line = draftline.strip().replace(" ","")
         if line[0:13]=="\\begin{multi}" or line[0:17]=="\\begin{numerical}":
             count=count+1
@@ -131,7 +130,7 @@ def newxml(dict,digitsdic,inputxml,inputtex,output_name):
         indices=list(dict.keys())
         for draftline in a_file:
             line = draftline.strip()
-
+            #print(line)
             if line=="<question type=\"multichoice\">":
                 count=count+1
             if line=="<question type=\"numerical\">":
@@ -164,7 +163,18 @@ def newxml(dict,digitsdic,inputxml,inputtex,output_name):
 
     f.close()
 
-##exo=exercises(texfile)[0]
-##print(answers(exo))
+def fixmoodleset(filename):
+    p=re.compile('\\\\moodleset \{[^}]*\}[^}]*\}')
+    with open(filename, 'r') as file:
+        file_as_string= file.read()
+        new_string=re.sub(p,'',file_as_string)
+    with open(filename, "w") as a_file:
+        a_file.write(new_string)
+
+
+
+#exo=exercises(texfile)[0]
+#print(answers(exo))
 u=findcalculated(texfile)
 newxml(u[0],u[1],xmlfile,texfile,outputfile)
+fixmoodleset(outputfile)

@@ -49,3 +49,8 @@ in the calculated questions, you cannot use latex in the answers.
 
 The script will build a calculated question together with datasets of size 100, sampled among the selected values for each
 for the parameters.
+
+extra info:  
+As of the moodle.sty documentation, one can use the command   \moodleset{feedback={put here your feedback}} within the question text
+to add a general feedback to a question. In our experience, a bug appears: the feedback text appears also in the question text.
+Since Nov. 2020 the 7th, this is compensated by our script, which removes it from the question text.
