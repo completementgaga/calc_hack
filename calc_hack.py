@@ -26,8 +26,9 @@ def findcalculated(file_name):
             p=0
             digits=1
         if p==1:
-            var=line[0]
-            vals=line[2:].rstrip('\\').rstrip(',')
+            u=line.split(':',1)
+            var=u[0]
+            vals=u[1].rstrip('\\').rstrip(',')
             if vals[0]=="r":
                 seq=''
                 L=eval(vals)
