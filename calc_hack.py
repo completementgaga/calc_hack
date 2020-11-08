@@ -1,10 +1,17 @@
 import sys
 import random
 import re
-texfile=sys.argv[1]
+import argparse
+parser = argparse.ArgumentParser(description='Processes a pair of files (.tex,.xml) that correspond to a moodle quiz, through the moodle.sty latex package in order to turn them into the xml of a moodle calculated quiz.')
+parser.add_argument('tex_name', help='the name of the tex file')
+parser.add_argument('-n','--numpy',action='store_true', help="use this flag if numpy is used to build your values' iterators (if used, numpy needs to be already installed on your system)")
+#parser.add_argument('-m','--modules',nargs='+', help="extra python modules that are used to build your values' iterators (they need to be already installed on your system)")
+args = parser.parse_args()
+texfile=args.tex_name
 xmlfile=(texfile.split('.'))[0]+'-moodle.xml'
 outputfile=(texfile.split('.'))[0]+'-moodle-calc.xml'
-
+if args.numpy==True:
+    import numpy
 
 def findcalculated(file_name):
     with open(file_name, "r") as a_file:
@@ -29,7 +36,8 @@ def findcalculated(file_name):
             u=line.split(':',1)
             var=u[0]
             vals=u[1].rstrip('\\').rstrip(',')
-            if vals[0]=="r":
+            #if vals[0]=="r" or vals[0:5]=="numpy":
+            if not vals[0].isnumeric():
                 seq=''
                 L=eval(vals)
                 for i in L:

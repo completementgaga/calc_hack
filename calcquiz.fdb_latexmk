@@ -1,5 +1,5 @@
 # Fdb version 3
-["lualatex"] 1604759120 "calcquiz.tex" "calcquiz.pdf" "calcquiz" 1604759122
+["lualatex"] 1604848246 "calcquiz.tex" "calcquiz.pdf" "calcquiz" 1604848247
   "/home/gcousin/.texlive2020/texmf-var/luatex-cache/generic-dev/fonts/otl/lmmono12-regular.luc" 1599303302 77605 f9b6b60d070c8e05977c28ac1ffe957e ""
   "/home/gcousin/.texlive2020/texmf-var/luatex-cache/generic-dev/fonts/otl/lmroman12-regular.luc" 1599303302 123499 c5f7384c64afc561e21f1eba24e9f128 ""
   "/home/gcousin/.texlive2020/texmf-var/luatex-cache/generic-dev/names/luaotfload-names.luc" 1599303301 1280693 217b14a36ccad23a9ad744d25fa266d4 ""
@@ -109,11 +109,11 @@
   "/usr/local/texlive/2020/texmf-dist/tex/luatex/luaotfload/luaotfload-unicode.lua" 1588886615 3061 df938c2f24624b5e7d48dc8d6d06b8dd ""
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1598362392 4945119 398ccd6cf9244f24a4ca8de17903ca30 ""
   "/usr/local/texlive/2020/texmf-var/web2c/luahbtex/lualatex.fmt" 1598362440 2954185 e0217e274f446fd0df749ff4fc45d059 ""
-  "calcquiz.aux" 1604759122 8 a94a2480d3289e625eea47cd1b285758 "lualatex"
-  "calcquiz.tex" 1604759120 1076 9780804cd71a08dffcb32e45c80522fc ""
+  "calcquiz.aux" 1604848247 8 a94a2480d3289e625eea47cd1b285758 "lualatex"
+  "calcquiz.tex" 1604848244 1133 276a7915e9b93f39c5ae7a56a591cdbb ""
   "moodlept.sty" 1598645993 83056 5e08e2f4c1f5f88e1cf4a064e811966b ""
   (generated)
-  "calcquiz.pdf"
   "calcquiz.aux"
-  "calcquiz.log"
   "calcquiz-moodle.xml"
+  "calcquiz.pdf"
+  "calcquiz.log"

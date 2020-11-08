@@ -36,7 +36,7 @@ in the calculated questions, you cannot use latex in the answers.
  and sa,sb,... determine the set in which the values are randomly taken (uniformly).
 
  sa,sb,... can be lists of values like 1,3,7
- or an expression range(a,b), meaning the integer interval [a,b-1]
+ or an expression range(m,n), meaning the integer interval [m,n-1]
 
  after the parameters description you must also add two lines:
 
@@ -54,3 +54,15 @@ extra info:
 As of the moodle.sty documentation, one can use the command   \moodleset{feedback={put here your feedback}} within the question text
 to add a general feedback to a question. In our experience, a bug appears: the feedback text appears also in the question text.
 Since Nov. 2020 the 7th, this is compensated by our script, which removes it from the question text.
+
+more advanced features:
+instead of range(m,n) in the description params\\ of the parameters, you can actually use
+any python command that returns an iterable (e.g. range(m,n,2))
+To enrich the options in this direction, you can add the flag  -n when calling calc_hack (eg  
+$ python3 calc_hack.py calcquiz.tex -n  
+)
+
+It will import numpy in the beginning of
+the script (provided it is installed on your system) and hence allow to use commands
+such as numpy.arange(1,5,0.1) or numpy.linspace(0.2,15.9,18) for lists of evenly spaced non necessarily
+integer numbers (check https://numpy.org/ for details)
