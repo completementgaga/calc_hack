@@ -62,7 +62,7 @@ def findcalculated(file_name):
 
 def preparetolerance(dig):
      return '<tolerance>'+str(pow(10,-dig))+'</tolerance>\n'+\
-    '<tolerancetype>1</tolerancetype>\n<correctanswerformat>1</correctanswerformat>\n'+\
+    '<tolerancetype>2</tolerancetype>\n<correctanswerformat>1</correctanswerformat>\n'+\
     '<correctanswerlength>'+str(dig)+'</correctanswerlength>\n'
 
 
@@ -148,7 +148,9 @@ def newxml(dict,digitsdic,inputxml,inputtex,output_name):
                 f.write("<question type=\"calculatedmulti\">\n")
             elif line=="<question type=\"numerical\">" and count in indices:
                 f.write("<question type=\"calculatedsimple\">\n")
-
+            elif line[0:11]=="<tolerance>" and count in indices:
+                #write nothing
+                None
             elif line=="</answer>" and count in indices:
                 dig=digitsdic[count]
                 f.write(preparetolerance(dig))
